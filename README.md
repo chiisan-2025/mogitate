@@ -97,7 +97,6 @@ docker-compose up -d
 　　　-（環境によっては http://localhost:8080/products ）
 
 停止するときは次のコマンドを使用します。
-
 docker-compose down
 
 📌 今回の課題で意識した点
