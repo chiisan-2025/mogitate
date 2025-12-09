@@ -16,7 +16,7 @@ Webアプリ開発の基礎を一通り学べる構成になっています
 | 開発環境 | Docker / docker-compose |
 | エディタ | VSCode |
 
-📌 主な機能一覧
+📌 **主な機能一覧**
 
 ###✔ 商品（products）
 -	新規登録（画像アップロード対応）
@@ -38,12 +38,12 @@ Webアプリ開発の基礎を一通り学べる構成になっています
 -	belongsToMany によるリレーション実装済み
 -	商品から季節、季節から商品を取得可能
 
-🗂 ER図
+🗂 **ER図**
 
 プロジェクトのテーブル構造は以下の通りです👇
 ![ER図](src/public/images/er_mogitate.jpeg)
 
-📁 フォルダ構成（主要部分のみ）
+📁 **フォルダ構成（主要部分のみ）**
 ```
 mogitate/
 ├── app/
@@ -66,7 +66,7 @@ mogitate/
 └── README.md
 ```
 
-⚙️ 環境構築手順
+⚙️ **環境構築手順**
 
 #### 1.リポジトリをクローン
 - git clone <your repository url>
