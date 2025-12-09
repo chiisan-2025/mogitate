@@ -1,64 +1,112 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+🌱 mogitate
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+季節ごとの旬の果物を管理する Laravel制作アプリ です。
+商品（Product）と季節（Season）は 多対多（ManyToMany） で紐づけられ、
+商品登録、編集、削除、検索、並び替え、詳細表示といった
+Webアプリ開発の基礎を一通り学べる構成になっています
 
-## About Laravel
+🚀 使用技術
+Category　　　　　　　Tech
+言語　　　　　　　　　　PHP 8.x
+FW　　　　　　　　　　　Laravel 10.x
+DB　　　　　　　　　　　MySQL 8.x
+開発環境　　　　　　　　Docker / docker-compose
+エディタ　　　　　　　　VSCode
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+📌 主な機能一覧
+✔ 商品（products）
+	•	新規登録（画像アップロード対応）
+	•	編集（画像差し替えも可能）
+	•	削除
+	•	一覧表示（グリッドUI）
+	•	詳細表示（カードクリックで遷移）
+	•	検索機能（曖昧検索）
+	•	並び替え（価格昇順/降順）
+	•	ページネーション対応
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+✔ 季節（seasons）
+	•	季節の登録（Seederで初期データ作成）
+	•	商品との関連付け（多対多）
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-## Learning Laravel
+✔ 商品 × 季節（多対多）
+	•	中間テーブル（product_season）による紐づけ
+	•	belongsToMany によるリレーション実装済み
+	•	商品から季節、季節から商品を取得可能
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+🗂 ER図
+プロジェクトのテーブル構造は以下の通りです👇
+![ER図](public/images/er_mogitate.jpeg)
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+📁 フォルダ構成（主要部分のみ）
+mogitate/
+├── app/
+│   ├── Http/
+│   ├── Models/
+│   └── Requests/ProductRequest.php
+├── database/
+│   ├── migrations/
+│   └── seeders/
+├── public/
+│   └── images/
+│       └── er_mogitate.jpeg
+├── resources/
+│   └── views/
+│       └── products/
+├── routes/
+│   └── web.php
+├── docker-compose.yml
+├── composer.json
+└── README.md
 
-## Laravel Sponsors
+⚙️ 環境構築手順
+# リポジトリをクローン
+git clone <your repository url>
+cd mogitate
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+# Composer パッケージをインストール
+composer install
 
-### Premium Partners
+# .env 作成
+cp .env.example .env
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+# アプリケーションキー生成
+php artisan key:generate
 
-## Contributing
+# Docker 起動
+docker-compose up -d
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+# マイグレーション実行
+php artisan migrate
 
-## Code of Conduct
+▶️ 起動方法
+Docker を使用しているため、以下のコマンドでアプリケーションを起動できます。
+# Docker の起動
+docker-compose up -d
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+起動後、以下の URL にアクセスすることでアプリを利用できます。
+👉 http://localhost/products
+　　　-（環境によっては http://localhost:8080/products ）
 
-## Security Vulnerabilities
+停止するときは次のコマンドを使用します。
+docker-compose down
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+📌 今回の課題で意識した点
+	•	ER 図とテーブル仕様書を正確に一致させるよう設計
+	•	多対多（ManyToMany）の理解・中間テーブル実装
+	•	belongsToMany のリレーション理解と活用
+	•	FormRequest によるバリデーション管理
+	•	UI の統一感・可読性を意識したコーディング
 
-## License
+⸻
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+💬 今後の改善予定
+	•	季節別の一覧ページ
+	•	管理画面 UI の更なる改善
+	•	バリデーションメッセージの強化
+	•	レスポンシブ対応
+	•	画像アップロードのセキュリティ改善（storage階層構造など）
+
+💻 作者
+
+小牧智沙都
