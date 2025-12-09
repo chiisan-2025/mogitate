@@ -69,7 +69,7 @@ mogitate/
 ⚙️ **環境構築手順**
 
 #### 1.リポジトリをクローン
-- git clone <your repository url>
+- git clone <https://github.com/chiisan-2025/mogitate.git>
 - cd mogitate
 
 #### 2.Composer パッケージをインストール
