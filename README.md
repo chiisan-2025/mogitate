@@ -68,12 +68,11 @@ mogitate/
 
 ⚙️ 環境構築手順
 
-####リポジトリをクローン
-git clone <your repository url>
+# 1.リポジトリをクローン
+- git clone <your repository url>
+- cd mogitate
 
-cd mogitate
-
-#### Composer パッケージをインストール
+# Composer パッケージをインストール
 composer install
 
 ### .env 作成
