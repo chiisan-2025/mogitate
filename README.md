@@ -15,12 +15,6 @@ Webアプリ開発の基礎を一通り学べる構成になっています
 | DB | MySQL 8.x |
 | 開発環境 | Docker / docker-compose |
 | エディタ | VSCode |
-Category　　　　　　　Tech
-言語　　　　　　　　　　PHP 8.x
-FW　　　　　　　　　　　Laravel 10.x
-DB　　　　　　　　　　　MySQL 8.x
-開発環境　　　　　　　　Docker / docker-compose
-エディタ　　　　　　　　VSCode
 
 📌 主な機能一覧
 
