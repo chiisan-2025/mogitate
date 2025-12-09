@@ -94,10 +94,12 @@ docker-compose up -d
 
 起動後、以下の URL にアクセスすることでアプリを利用できます。
 👉 http://localhost/products
-　　　-（環境によっては http://localhost:8080/products ）
+　　　（環境によっては http://localhost:8080/products ）
 
 停止するときは次のコマンドを使用します。
+
 docker-compose down
+
 
 📌 今回の課題で意識した点
 - 	ER 図とテーブル仕様書を正確に一致させるよう設計
@@ -114,6 +116,7 @@ docker-compose down
 -	バリデーションメッセージの強化
 -	レスポンシブ対応
 -	画像アップロードのセキュリティ改善（storage階層構造など）
+
 
 💻 作者
 
