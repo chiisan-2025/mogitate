@@ -73,23 +73,23 @@ mogitate/
 - cd mogitate
 
 #### 2.Composer パッケージをインストール
-composer install
+- composer install
 
 #### 3. .env 作成
-cp .env.example .env
+- cp .env.example .env
 
-#### アプリケーションキー生成
-php artisan key:generate
+#### 4.アプリケーションキー生成
+- php artisan key:generate
 
-#### Docker 起動
-docker-compose up -d
+#### 5.Docker 起動
+- docker-compose up -d
 
-#### マイグレーション実行
-php artisan migrate
+#### 6.マイグレーション実行
+- php artisan migrate
 
 ▶️ 起動方法
 Docker を使用しているため、以下のコマンドでアプリケーションを起動できます。
-### Docker の起動
+#### Docker の起動
 docker-compose up -d
 
 起動後、以下の URL にアクセスすることでアプリを利用できます。
