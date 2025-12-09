@@ -72,19 +72,19 @@ mogitate/
 - git clone <your repository url>
 - cd mogitate
 
-# Composer パッケージをインストール
+#### 2.Composer パッケージをインストール
 composer install
 
-### .env 作成
+#### 3. .env 作成
 cp .env.example .env
 
-### アプリケーションキー生成
+#### アプリケーションキー生成
 php artisan key:generate
 
-### Docker 起動
+#### Docker 起動
 docker-compose up -d
 
-### マイグレーション実行
+#### マイグレーション実行
 php artisan migrate
 
 ▶️ 起動方法
