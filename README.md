@@ -66,13 +66,13 @@ mogitate/
 └── README.md
 ```
 
-##⚙️ 環境構築手順
-### リポジトリをクローン
+⚙️ 環境構築手順
+　### リポジトリをクローン
 git clone <your repository url>
 
 cd mogitate
 
-### Composer パッケージをインストール
+　### Composer パッケージをインストール
 composer install
 
 ### .env 作成
