@@ -1,4 +1,4 @@
-🌱 mogitate
+## 🌱 mogitate
 
 季節ごとの旬の果物を管理する Laravel制作アプリ です。
 商品（Product）と季節（Season）は 多対多（ManyToMany） で紐づけられ、
