@@ -6,7 +6,15 @@
 商品登録、編集、削除、検索、並び替え、詳細表示といった
 Webアプリ開発の基礎を一通り学べる構成になっています
 
-🚀 使用技術
+🚀 **使用技術**
+
+| Category | Tech |
+|---------|------|
+| 言語 | PHP 8.x |
+| FW | Laravel 10.x |
+| DB | MySQL 8.x |
+| 開発環境 | Docker / docker-compose |
+| エディタ | VSCode |
 Category　　　　　　　Tech
 言語　　　　　　　　　　PHP 8.x
 FW　　　　　　　　　　　Laravel 10.x
