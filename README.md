@@ -66,7 +66,7 @@ mogitate/
 └── README.md
 ```
 
-⚙️ 環境構築手順
+##⚙️ 環境構築手順
 ### リポジトリをクローン
 git clone <your repository url>
 
@@ -89,7 +89,7 @@ php artisan migrate
 
 ▶️ 起動方法
 Docker を使用しているため、以下のコマンドでアプリケーションを起動できます。
-# Docker の起動
+### Docker の起動
 docker-compose up -d
 
 起動後、以下の URL にアクセスすることでアプリを利用できます。
