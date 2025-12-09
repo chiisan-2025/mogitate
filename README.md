@@ -73,7 +73,7 @@ git clone <your repository url>
 
 cd mogitate
 
-　## Composer パッケージをインストール
+## Composer パッケージをインストール
 composer install
 
 ### .env 作成
