@@ -40,7 +40,7 @@ Webアプリ開発の基礎を一通り学べる構成になっています
 
 🗂 ER図
 プロジェクトのテーブル構造は以下の通りです👇
-![ER図](public/images/er_mogitate.jpeg)
+![ER図](src/public/images/er_mogitate.jpeg)
 
 📁 フォルダ構成（主要部分のみ）
 ```
