@@ -93,7 +93,7 @@ Docker を使用しているため、以下のコマンドでアプリケーシ�
 docker-compose up -d
 
 起動後、以下の URL にアクセスすることでアプリを利用できます。
-👉 http://localhost/products
+ http://localhost/products
 　　　（環境によっては http://localhost:8080/products ）
 
 停止するときは次のコマンドを使用します。
