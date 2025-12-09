@@ -101,7 +101,7 @@ docker-compose up -d
 docker-compose down
 
 
-📌 今回の課題で意識した点
+### 📌 今回の課題で意識した点
 - 	ER 図とテーブル仕様書を正確に一致させるよう設計
 -	多対多（ManyToMany）の理解・中間テーブル実装
 -	belongsToMany のリレーション理解と活用
@@ -110,7 +110,7 @@ docker-compose down
 
 ⸻
 
-💬 今後の改善予定
+### 💬 今後の改善予定
 -	季節別の一覧ページ
 -	管理画面 UI の更なる改善
 -	バリデーションメッセージの強化
