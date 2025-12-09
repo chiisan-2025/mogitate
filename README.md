@@ -68,7 +68,7 @@ mogitate/
 
 ⚙️ 環境構築手順
 
-　### リポジトリをクローン
+　 リポジトリをクローン
 git clone <your repository url>
 
 cd mogitate
