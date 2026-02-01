@@ -14,3 +14,5 @@ yarn-error.log
 /.idea
 /.vscode
 /docker/mysql/data/
+docker/mysql/data/
+docker/mysql/data_backup_20260119_142854/
