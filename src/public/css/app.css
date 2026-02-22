@@ -1,0 +1,412 @@
+/* 背景 */
+.bg {
+    background: #2f2f2f;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Segoe UI", sans-serif;
+}
+
+/* ヘッダー */
+.header {
+    background: #000;
+    color: #fff;
+}
+
+.header__inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.header__logo {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.header__search {
+    flex: 1;
+}
+
+.header__searchInput {
+    width: 100%;
+    height: 36px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    padding: 0 12px;
+}
+
+.header__nav {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.header__link {
+    background: transparent;
+    border: none;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.header__btn {
+    display: inline-block;
+    background: #fff;
+    color: #000;
+    padding: 8px 12px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+/* メインカード */
+.main {
+    padding: 32px 0 80px;
+}
+
+.card {
+    background: #fff;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 48px 64px;
+}
+
+/* 見出し */
+.h1 {
+    text-align: center;
+    font-size: 22px;
+    margin: 0 0 32px;
+    font-weight: 700;
+}
+
+.sectionTitle {
+    font-weight: 700;
+    margin: 28px 0 10px;
+}
+
+.hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 8px 0 18px;
+}
+
+/* フォーム */
+.formRow {
+    margin-bottom: 16px;
+}
+
+.label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.input,
+.textarea,
+.select {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px 12px;
+    box-sizing: border-box;
+}
+
+.textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* 画像枠 */
+.imageBox {
+    border: 1px dashed #bbb;
+    padding: 22px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fileBtn {
+    border: 1px solid #ff6b6b;
+    color: #ff6b6b;
+    background: #fff;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* カテゴリ pills */
+.pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.pill {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid #ff6b6b;
+    color: #ff6b6b;
+    border-radius: 999px;
+    padding: 6px 12px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.pill input {
+    display: none;
+}
+
+.pill.is-active {
+    background: #ff6b6b;
+    color: #fff;
+}
+
+/* 送信ボタン */
+.submitWrap {
+    margin-top: 28px;
+    display: flex;
+    justify-content: center;
+}
+
+.submitBtn {
+    width: 360px;
+    height: 48px;
+    border: none;
+    background: #ff6b6b;
+    color: #fff;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* エラー */
+.error {
+    color: #ff3b30;
+    margin: 0 0 16px;
+    font-weight: 700;
+}
+
+/* 全体 */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", "Segoe UI", sans-serif;
+}
+
+.bg {
+    background: #fff;
+}
+
+.main {
+    padding: 32px 24px;
+}
+
+/* ヘッダー（見本寄せ） */
+.header {
+    background: #000;
+    color: #fff;
+}
+
+.header__inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 14px 18px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.header__logo {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 800;
+    letter-spacing: 1px;
+    font-size: 20px;
+    min-width: 140px;
+}
+
+.header__search {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.header__searchInput {
+    width: min(520px, 100%);
+    height: 38px;
+    border-radius: 4px;
+    border: none;
+    padding: 0 14px;
+    outline: none;
+}
+
+.header__nav {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.header__navItem {
+    display: inline-flex;
+    align-items: center;
+    margin: 0;
+}
+
+.header__link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 6px 8px;
+}
+
+.header__btn {
+    background: #fff;
+    color: #000;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 8px 14px;
+    border-radius: 4px;
+}
+
+.header__btnLink {
+    font: inherit;
+}
+
+/* プロフィール（見本寄せ） */
+.profileWrap {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.profileTop {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+}
+
+.profileLeft {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.avatar {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    background: #d9d9d9;
+    overflow: hidden;
+    flex: 0 0 auto;
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.profileName {
+    font-size: 28px;
+    font-weight: 800;
+}
+
+.editBtn {
+    border: 2px solid #ff5a5a;
+    color: #ff5a5a;
+    background: #fff;
+    text-decoration: none;
+    font-weight: 800;
+    padding: 12px 18px;
+    border-radius: 6px;
+}
+
+/* タブ */
+.tabs {
+    display: flex;
+    gap: 28px;
+    padding: 18px 8px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.tabLink {
+    text-decoration: none;
+    color: #666;
+    font-weight: 800;
+    padding: 12px 4px;
+    border-bottom: 3px solid transparent;
+}
+
+.tabLink.is-active {
+    color: #ff5a5a;
+    border-bottom-color: #ff5a5a;
+}
+
+/* 商品グリッド */
+.grid {
+    padding: 22px 0 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 26px;
+}
+
+.card {
+    text-decoration: none;
+    color: #111;
+}
+
+.thumb {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background: #d9d9d9;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.itemName {
+    margin-top: 10px;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+/* レスポンシブ */
+@media (max-width: 900px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .header__inner {
+        flex-wrap: wrap;
+    }
+
+    .header__logo {
+        min-width: auto;
+    }
+}

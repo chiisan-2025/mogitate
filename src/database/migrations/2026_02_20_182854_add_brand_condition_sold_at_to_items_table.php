@@ -1,0 +1,35 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class AddBrandConditionSoldAtToItemsTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::table('items', function (Blueprint $table) {
+            $table->string('brand')->nullable()->after('name');
+
+        // まずはカラムだけ（あとで外部キーつける）
+            $table->unsignedBigInteger('condition_id')->after('user_id');
+
+            $table->timestamp('sold_at')->nullable()->after('is_sold');
+
+            $table->index('condition_id');
+        });
+    }
+
+    public function down()
+    {
+        Schema::table('items', function (Blueprint $table) {
+            $table->dropIndex(['condition_id']);
+            $table->dropColumn(['brand', 'condition_id', 'sold_at']);
+        });
+    }
+}

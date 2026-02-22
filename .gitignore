@@ -1,2 +1,13 @@
-# Docker MySQL data
+# macOS
+.DS_Store
+**/.DS_Store
+
+# env
+.env
+.env.*
+!.env.example
+
+# MySQL data (do not commit)
 docker/mysql/data/
+docker/mysql/data_backup_*/
+docker/mysql/logs/

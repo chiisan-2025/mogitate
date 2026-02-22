@@ -1,122 +1,91 @@
-# 🌱 mogitate
+# Flea Market
 
-季節ごとの旬の果物を管理する Laravel制作アプリ です。
-商品（Product）と季節（Season）は 多対多（ManyToMany） で紐づけられ、
+フリマアプリ（出品 / 購入 / お気に入り / コメント / 検索 / メール認証）を実装しました。
 
-商品登録、編集、削除、検索、並び替え、詳細表示といった
-Webアプリ開発の基礎を一通り学べる構成になっています
+---
 
-🚀 **使用技術**
+## 環境構築
 
-| Category | Tech |
-|---------|------|
-| 言語 | PHP 8.x |
-| FW | Laravel 10.x |
-| DB | MySQL 8.x |
-| 開発環境 | Docker / docker-compose |
-| エディタ | VSCode |
+### 起動
 
-📌 **主な機能一覧**
-
-#### ✔ 商品（products）
--	新規登録（画像アップロード対応）
--	編集（画像差し替えも可能）
--	削除
--	一覧表示（グリッドUI）
--	詳細表示（カードクリックで遷移）
--	検索機能（曖昧検索）
--	並び替え（価格昇順/降順）
--	ページネーション対応
-
-#### ✔ 季節（seasons）
--	季節の登録（Seederで初期データ作成）
--	商品との関連付け（多対多）
-
-
-#### ✔ 商品 × 季節（多対多）
--	中間テーブル（product_season）による紐づけ
--	belongsToMany によるリレーション実装済み
--	商品から季節、季節から商品を取得可能
-
-🗂 **ER図**
-
-プロジェクトのテーブル構造は以下の通りです👇
-![ER図](src/public/images/er_mogitate.jpeg)
-
-📁 **フォルダ構成（主要部分のみ）**
-```
-mogitate/
-├── app/
-│   ├── Http/
-│   ├── Models/
-│   └── Requests/ProductRequest.php
-├── database/
-│   ├── migrations/
-│   └── seeders/
-├── public/
-│   └── images/
-│       └── er_mogitate.jpeg
-├── resources/
-│   └── views/
-│       └── products/
-├── routes/
-│   └── web.php
-├── docker-compose.yml
-├── composer.json
-└── README.md
+```bash
+docker compose up -d
 ```
 
-⚙️ **環境構築手順**
+### Laravelセットアップ
 
-#### 1.リポジトリをクローン
-- git clone <https://github.com/chiisan-2025/mogitate.git>
-- cd mogitate
+```bash
+docker compose exec php bash
+composer install
+cp .env.example .env
+php artisan key:generate
+php artisan migrate --seed
+```
 
-#### 2.Composer パッケージをインストール
-- composer install
+---
 
-#### 3. .env 作成
-- cp .env.example .env
+## 使用技術
 
-#### 4.アプリケーションキー生成
-- php artisan key:generate
+- Laravel
+- MySQL
+- Laravel Fortify（認証）
+- MailHog（メール確認）
 
-#### 5.Docker 起動
-- docker-compose up -d
+---
 
-#### 6.マイグレーション実行
-- php artisan migrate
+## 機能一覧
 
-▶️ 起動方法
-Docker を使用しているため、以下のコマンドでアプリケーションを起動できます。
-#### Docker の起動
-- docker-compose up -d
+- 会員登録 / ログイン / ログアウト
+- メール認証（認証メール送信、再送、認証完了後の遷移）
+- 商品一覧（おすすめ / マイリスト切替、検索）
+- 商品詳細（カテゴリ、コメント、いいね数）
+- 出品（画像、カテゴリ複数選択、状態、価格）
+- 購入（支払い方法選択、購入後は sold 表示）
+- お気に入り登録 / 解除
+- コメント投稿 / 削除
+- プロフィール表示（購入 / 出品タブ切替）
+- プロフィール編集
 
-起動後、以下の URL にアクセスすることでアプリを利用できます。
- http://localhost/products
-　（環境によっては http://localhost:8080/products ）
+---
 
-停止するときは次のコマンドを使用します。
-- docker-compose down
+## 画面・URL
 
+- トップ（商品一覧）: `/`
+- マイリスト（トップ切替）: `/?tab=mylist`
+- 会員登録: `/register`
+- ログイン: `/login`
+- 商品詳細: `/items/{item}`
+- 出品: `/items/create`
+- 購入: `/items/{item}/purchase`
+- プロフィール: `/profile?tab=buy` / `/profile?tab=sell`
+- プロフィール編集: `/profile/edit`
 
-#### 📌 今回の課題で意識した点
-- 	ER 図とテーブル仕様書を正確に一致させるよう設計
--	多対多（ManyToMany）の理解・中間テーブル実装
--	belongsToMany のリレーション理解と活用
--	FormRequest によるバリデーション管理
--	UI の統一感・可読性を意識したコーディング
+---
 
-⸻
+## テスト
 
-#### 💬 今後の改善予定
--	季節別の一覧ページ
--	管理画面 UI の更なる改善
--	バリデーションメッセージの強化
--	レスポンシブ対応
--	画像アップロードのセキュリティ改善（storage階層構造など）
+```bash
+php artisan test
+```
 
+全テストが通ることを確認済みです。（56 tests passed）
 
-💻 作者
+---
+
+## ER図
+
+※ER図は `docs/erd.png`に配置しています。
+
+---
+
+## メール認証の確認
+
+MailHogで認証メールを確認できます。
+
+- MailHog: http://localhost:8025
+
+---
+
+## 💻 作者
 
 小牧智沙都
